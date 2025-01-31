@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+	<head>
+		<title>City Builder Menu</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+		<meta name="author" content="Benjamin-justin Barth">
+		<meta name="description" content="a small city builder"> 
+		<meta name="keywords" content="city, build, game, grid, house, minigame">
+        <link rel="stylesheet" href="menustyle.css" type="text/css">
+        <script src="function.js" async></script>
+        <link rel="icon" type="image/png" href="icon.png">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Here comes the Audio -->
+        <audio src="misc/audio/sounds/Click.ogg" autoplay="autoplay" id = "click"></audio>
+        <audio loop src="misc/audio/music/Space Dance.ogg" autoplay="autoplay" id = "backgroundaudio"></audio> 
+
+        <audio id="click" src="misc/audio/sounds/Click.ogg"></audio>
+        <audio id="click1" src="misc/audio/sounds/Click.ogg"></audio>
+        <audio id="destroy" src="misc/audio/sounds/Destroy.ogg"></audio>
+        <script>
+            //background music
+            var audio = document.getElementById("backgroundaudio");
+            audio.volume = 0.3;
+
+            //Click when button is pressed
+            function clicksound(){
+                var audio = document.getElementById("click");
+                audio.play();
+            }
+            function clicksound1(){
+                var audio1 = document.getElementById("click1");
+                audio1.play();
+            }
+
+        </script>
+        <!-- Here comes the Main Part -->
+        <div class = background>
+            <div class = settings>
+                <input type= "button" id = "settings" class = "settingbtn" onclick="clicksound()">
+            </div>
+            <div class="title">
+                City Builder
+            </div>
+            <div class = menu>
+                <div class = mainbutton id = mainbutton>
+                    <input type= "button" id = "play" class = "startbtn" value = "Start your City" onclick="window.location.href = 'game.html';">
+                </div>
+                <div class = buttons id = "buttons">
+                    <input type= "button" id = "credits" class = "btn" value = "Credits" onclick="displaycredit()">
+                    <input type= "button" id = "info" class = "btn" value = "Info" onclick="displayinfo()">               
+                </div>
+                <div class = "infotext" id = "infotext">
+                    <input type= "button" id = "close" class = "closebtn" onclick="hideinfo()">
+                    <div class = text>
+                        <br><br>
+                        This is a City Builder where you can build and contain your small town. You are starting with an empty map.<br><br><div style ="color: rgb(194, 41, 41)">
+                        !!The recommended Display Resolution is &ge; 1280 x 1024!!</div><br>
+                        Use F11 to enter the fullscreen mode to get the best result.
+                        Make sure that you use zoom level 100% in your Browser. Adjust the zoom when using a different resolution so nothing is hidden.
+                    </div>             
+                </div>
+                <div class = "infotext" id = "credittext">
+                    <input type= "button" id = "close2" class = "closebtn" onclick="hideinfo()">
+                    <div class = text>
+                        <br><br>
+                        This game was developed as Part of the "Softwareprojekt" in 2021
+                        Every graphic, image, sound and music was created by Benjamin Justin Barth and is subject to the copyright.
+                    </div>             
+                </div>
+            </div>
+            <div class="copyright">
+                &copy 2021, Benjamin-Justin Barth
+            </div>
+            <script>
+                function displayinfo(){
+                    document.getElementById("infotext").style.display = "block";
+                    document.getElementById("buttons").style.display = "none";
+                    document.getElementById("mainbutton").style.display = "none";
+                }
+
+                function displaycredit(){
+                    document.getElementById("credittext").style.display = "block";
+                    document.getElementById("buttons").style.display = "none";
+                    document.getElementById("mainbutton").style.display = "none";
+                }
+
+                function hideinfo(){
+                    document.getElementById("credittext").style.display = "none";
+                    document.getElementById("infotext").style.display = "none";
+                    document.getElementById("buttons").style.animation = "fadeInAnimation3 ease 1.5s";
+                    document.getElementById("buttons").style.display = "block";
+                    document.getElementById("mainbutton").style.animation = "fadeInAnimation3 ease 1.5s";
+                    document.getElementById("mainbutton").style.display = "block";
+                }
+
+                document.getElementById('settings').addEventListener('click', clicksound);
+                document.getElementById('play').addEventListener('click', clicksound);
+                document.getElementById('credits').addEventListener('click', clicksound);
+                document.getElementById('info').addEventListener('click', clicksound);
+                document.getElementById('close').addEventListener('click', clicksound1);
+                document.getElementById('close2').addEventListener('click', clicksound1);
+            </script>
+        </div>
+    </body>

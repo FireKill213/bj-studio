@@ -1,0 +1,221 @@
+body, html{
+	margin:				0px 0px;
+    height: 100%;
+    background-color: #233f53;
+    font-family: 'Fredoka One', cursive; 
+}
+
+.background{
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(misc/ui/backgrounds/Skyline.png) ;
+}
+
+.menu{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.closebtn{  
+    float: right;
+    margin-bottom: 20px; 
+    background-color: transparent;
+    border: none;
+    border-radius: 50px;
+    background-image: url(misc/ui/buttons/quit.png) ;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    outline: none;
+    transition: 0.5s;
+
+}
+
+.closebtn:hover{
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.infotext{
+    position: relative;
+    top: 170px;
+    display: none;
+    min-height: 400px;
+    width: 680px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+    background-color: rgba(255, 255, 255, 0.514);
+    animation: fadeInAnimation3 ease 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.buttons{
+    width: 600px;
+    height: max-content;
+    animation: fadeInAnimation2 ease 3s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+}
+
+.btn{
+    height: 110px;
+    position: fixed;
+    border-radius: 20px;
+    padding: 15px;
+    display: inline-block;
+    min-width: 280px;
+    color: black;
+    font-size: 60px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.514);
+    outline: none;
+    transition: 0.5s;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    font-family: 'Fredoka One', cursive;
+}
+
+#info{
+    top: 180px;
+    left: 300px;
+}
+#credits{
+    top: 180px;
+
+}
+
+.btn:hover{
+    background-color: white;
+    transition: 0.5s;
+    cursor: pointer;
+    height: 120px;
+}
+
+.mainbutton{
+    top: 0;
+    animation: fadeInAnimation ease 3s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+}
+
+.startbtn{
+    position: fixed;
+    width: 580px;
+    height: 160px;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 20px;
+    color: black;
+    font-size: 70px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.514);
+    outline: none;
+    transition: 0.5s;
+    text-decoration: 	none;
+    outline: none;
+    border: none;
+    font-family: 'Fredoka One', cursive;
+    cursor: pointer;
+}
+
+.startbtn:hover{
+    background-color: white;
+    transition: 0.5s;
+    height: 170px;
+    
+}
+
+.settings{
+    visibility: hidden;
+    float: right;
+    padding-top: 1%;
+    padding-right: 1%;
+    margin-bottom: 5px;
+    width: 105px;
+    height: 105px;
+    animation: fadeInAnimation ease 3s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+}
+
+.settingbtn{   
+    background-color: transparent;
+    border: none;
+    border-radius: 50px;
+    background-image: url(misc/ui/buttons/quit.png) ;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    outline: none;
+    transition: 0.5s;
+
+}
+
+.settingbtn:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    background-image: url(misc/ui/buttons/quit\ hover.png) ;
+}
+
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    20% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     }    
+} 
+
+@keyframes fadeInAnimation2 { 
+    0% { 
+        opacity: 0; 
+    } 
+    40% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     }    
+} 
+
+@keyframes fadeInAnimation3 { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     }    
+} 
+
+.copyright{
+    padding: 3px;
+    border-radius: 5px;
+    background-color: rgba(25, 25, 25, 0.714);
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+    font-size: 18px;
+    color:#ffffffa7;
+    text-align: center;
+}
+.title{
+    width: max-content;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    font-size: 180px;
+    color:#28567ad7;
+    text-align: center;
+}
+

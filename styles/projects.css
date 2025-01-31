@@ -1,0 +1,167 @@
+/* ===== Grundlegende Kartenstruktur ===== */
+.cards {
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.content {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid #008CC1;
+  box-shadow: 0 0 15px #008CC1;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 calc(50% - 20px);
+  flex-direction: column;
+  margin: 10px;
+  max-width: 452px;
+  min-height: 300px;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+
+.content > * {
+  flex: 1 1 auto;
+}
+
+/* ===== Karteninhalt ===== */
+.card-content {
+  flex: 1;
+  padding-bottom: 60px; /* Platz für Button */
+  position: relative;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  height: 40px;
+}
+
+.content h2 {
+  color: white;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  margin: 16px 0;
+  background-image: radial-gradient(closest-side at 50% 50%,rgb(0,0,0,0.25),rgb(0,0,0,0));
+  text-transform: uppercase;
+}
+
+.content p {
+  color: #fff;
+  font: bold 17px 'Poppins', sans-serif;
+  margin-bottom: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.content a {
+  background: #00435b;
+  border: 1px solid #00435b;
+  border-radius: 25px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: 600;
+  height: 40px;
+  padding: 0 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ===== Hintergrund-Effekte ===== */
+.background-wrapper {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.background {
+  background-position: center;
+  background-size: cover;
+  filter: brightness(85%) blur(2px);
+  height: 100%;
+  transform: scale(1.1);
+  transition: filter 0.3s ease;
+  width: 100%;
+}
+
+/* ===== Hover-Effekte ===== */
+.content:hover {
+  border-color: #008CC1;
+  box-shadow: 0 0 25px #008CC1;
+  color: white;
+}
+
+.content:hover .background {
+  filter: brightness(40%) blur(2px);
+}
+
+.content:hover h2 {
+  text-shadow: none;
+}
+
+.content:hover p {
+  opacity: 1;
+}
+
+.content:hover a {
+  background: #008CC1;
+  border-color: white;
+  height: 40px;
+}
+
+.content a:hover{
+  border-radius: 4px;
+  box-shadow: 0 0 10px #fff;
+}
+
+/* ===== Responsive Anpassungen ===== */
+@media (max-width: 1024px) {
+  .content {
+    max-width: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .services {
+    flex-direction: column;
+  }
+  
+  .content {
+    flex-basis: 100%;
+    min-height: 300px;
+  }
+
+  .button-container {
+    height: 35px;
+    bottom: 15px;
+  }
+
+  .content a {
+    font-size: 13px;
+    height: 35px;
+  }
+}

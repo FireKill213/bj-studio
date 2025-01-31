@@ -1,0 +1,445 @@
+@font-face {
+    font-family: Bahnschrift;
+    src: url(/font/BAHNSCHRIFT.TTF);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Bahnschrift;
+    scroll-behavior: smooth;
+    background-color: rgb(252, 252, 252);
+    transition: background-color 0.5s;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+h2 {
+    position: relative;
+    padding: 0;
+    margin: 20px 0;
+    font-weight: 300;
+    font-size: 50px;
+    color: #080808;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 span {
+    display: block;
+    font-size: 0.5em;
+    line-height: 1.3;
+}
+
+h2 em {
+    font-style: normal;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 10px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    transition-duration: 0.5s;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    position: relative;
+}
+
+.section h2:before,
+.section h2:after {
+    content: "";
+    flex: 1;
+    border-bottom: 2px solid #ccc;
+    background-color: #f8f8f8;
+    margin: 0 20px; /* Adjust this margin to control the space between the text and the lines */
+}
+
+.section h2:before {
+    margin-right: 20px; /* Adjust the space before the text */
+}
+
+.section h2:after {
+    margin-left: 20px; /* Adjust the space after the text */
+}
+
+.welcome-image {
+    background-image: url('../assets/sydney_wallpaper.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.welcome-text {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.australian-flag {
+    display: flex;
+    align-items: center;
+}
+
+.australian-flag svg {
+    width: 60px;
+    height: 60px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(107, 176, 179);
+    transition: background-color 0.5s;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 10px 18px 0px rgba(0, 0, 0, 0.46);
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+.grid-gallery {
+    display: grid;
+    margin-bottom: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.46);
+    transition: 0.5s;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+.item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.item.large {
+    grid-column: span 3;
+    grid-row: span 3;
+}
+
+.item.medium {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.item.small {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+@media only screen and (max-width: 1159px) {
+    .item.large {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .item.small {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    .item.large {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .item.medium {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .item.small {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+.gallery-text {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.gallery-text p {
+    font-size: 60px;
+    font-weight: 900;
+    text-shadow: 0px -1px 0px #eeeeee,
+        0px 1px 0px #555555;
+    color: #EE6C4D;
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.carousel-text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.carousel-indicator {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-indicator.active {
+    background-color: #EE6C4D;
+}
+
+.info-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgb(238, 108, 77);
+    transition: background-color 0.5s;
+    box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.46);
+}
+
+.info-text-block {
+    width: 50%;
+}
+
+.info-text-block p {
+    font-size: 18px;
+    line-height: 1.2em;
+}
+
+.info-text-block-wide p {
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+.info-block:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.info-block img {
+    max-width: 100%;
+    height: auto;
+}
+
+.info-block .info-images-block {
+    flex: 1;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .info-text-block {
+        width: inherit;
+    }
+
+    .info-block {
+        flex-direction: column;
+    }
+
+    .info-block:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+}
+
+#section2 {
+    margin-bottom: 40px;
+}
+
+#section5 h2 {
+    color: white;
+}
+
+.audio-container {
+    background-color: #355859;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius:50px;
+    width: fit-content;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.5s;
+}
+
+.audio-container:hover {
+    background-color: #6BB0B3;
+}
+
+#section6 h2 {
+    color: white;
+}
+
+#section7 {
+    margin-bottom: 0;
+    padding-bottom: 50px;
+}
+
+#section7 h2 {
+    color: white;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.46);
+}
+
+canvas {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.46);
+}
+
+.pdf-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pdf {
+    align-self: flex-start;
+}
+
+.button-wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.pdf-button {
+    background-color: #355859;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+    font-size: 16px;
+}
+
+.pdf-button:hover {
+    background-color: #6BB0B3;
+}

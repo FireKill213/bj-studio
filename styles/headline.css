@@ -1,0 +1,62 @@
+:root {
+    --background-color: #F9F8F8;
+    --headline-color: #fff;
+  }
+  
+  header.header {
+    margin: 0;
+    padding: 1rem 0rem;
+    width: 100%;
+    text-align: center;
+    position: relative; /* Wichtig für Glitch-Positionierung */
+  }
+  
+  .glitched {
+    position: relative;
+    font-size: 4rem;
+    color: var(--headline-color);
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1.2;
+  }
+  
+  .glitch-window {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--headline-color);
+    text-shadow: 2px 0 var(--background-color), -1px 0 #008CC1, -2px 0 #00435b;
+    overflow: hidden;
+    animation: crt-me 2500ms infinite linear alternate-reverse;
+    pointer-events: none;
+  }
+  
+  @keyframes crt-me {
+    0% { clip-path: inset(10% 0 80% 0) }
+    10% { clip-path: inset(50% 0 30% 0) }
+    20% { clip-path: inset(30% 0 60% 0) }
+    30% { clip-path: inset(80% 0 10% 0) }
+    40% { clip-path: inset(20% 0 70% 0) }
+    50% { clip-path: inset(50% 0 40% 0) }
+    60% { clip-path: inset(70% 0 20% 0) }
+    70% { clip-path: inset(10% 0 80% 0) }
+    80% { clip-path: inset(40% 0 50% 0) }
+    90% { clip-path: inset(60% 0 30% 0) }
+    100% { clip-path: inset(20% 0 70% 0) }
+  }
+  
+  /* Responsive Anpassungen */
+  @media (max-width: 768px) {
+    .glitched {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (min-width: 1600px) {
+    .glitched {
+      font-size: 6rem;
+    }
+  }

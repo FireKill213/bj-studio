@@ -1,0 +1,607 @@
+body, html{
+	margin:	0px 0px;
+    background-color: #28567A;
+    font-family: 'Fredoka One', cursive;
+    
+}
+
+body::-webkit-scrollbar{
+    display: none;
+    overflow: hidden;
+}
+
+#background{
+    display: none;
+    min-width: 2900px;
+    background-color: #28567A;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.game{
+    position: relative;
+}
+
+#inputname{  
+    height: 40px;
+    width: 400px;
+    border: #28567A solid 2px;
+    text-align: center;
+    background-color: transparent;
+    font-size: 25px;
+    outline: none;
+    font-family: 'Fredoka One', cursive;
+    text-transform: uppercase;
+}
+
+#play{
+    visibility: hidden;
+}
+
+#error{
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: white;
+    font-size: 25px;
+    z-index: 1;
+}
+
+#startscreen, #gameOverWindow, #randomeventinfo, #gamemanual{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border: #28567A solid 10px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.836);
+    font-size: 25px;
+    width: 700px;
+    z-index: 3;
+}
+#randomeventinfo{
+    display: none;
+}
+
+#gameOverWindow{
+    display: none;
+}
+
+#gamebar{
+    border-radius: 5px;
+    position: fixed;
+    min-width: 860px;
+    height: 70px;
+    background-color: #28567A;
+    margin: 5px;
+    z-index: 3;
+}
+
+#cityinfo{
+    position: fixed;
+    display: inline;
+    left: 5px;
+    bottom: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #28567A;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    z-index: 3;
+}
+
+#activated{
+    display: none;
+    margin-top: 5px;
+    margin-left: 315px;
+    border-radius: 15px;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(194, 41, 41); 
+}
+#budget,#income{
+    margin-left: 10px;
+    font-size: 20px;
+    position: fixed;
+    text-transform: uppercase;
+    background-color: white;
+    width: 175px;
+    padding-left: 5px;
+}
+#budget{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
+#income{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: 35px;
+    color:black;
+}
+#happy{
+    margin-left: 200px;
+    font-size: 20px;
+    position: fixed;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-image: url(misc/ui/buttons/neutral.png);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    text-align: left;
+    color: black;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+}
+
+#happyinfo{
+    text-align: center;
+}
+
+#popu{
+    margin-left: 2.5px;
+    margin-top: 2px;
+    position: fixed;
+    background-image: url(misc/ui/buttons/population.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+}
+#elec{
+    margin-left: 2.5px;
+    margin-top: 2px;
+    position: fixed;
+    background-image: url(misc/ui/buttons/Powerplant.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+}
+#population,#electricity{
+    width: 70px;
+    padding-right: 10px;
+    text-align: right;
+    margin-left: 260px;
+    font-size: 20px;
+    position: fixed;
+}
+#day,#clock{
+    width: 80px;
+    text-align: center;
+    margin-left: 350px;
+    font-size: 20px;
+    position: fixed;
+    text-transform: uppercase;
+}
+#day,#population{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-top: 10px;
+}
+#clock,#electricity{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: 35px;
+}
+
+#speed{
+    font-size: 18px;
+    margin: 10px 440px;
+    background-image: url(misc/ui/buttons/speed.png);
+    background-color: rgb(255, 255, 255);
+}
+#bulldoze{
+    margin: 10px 500px;
+    background-image: url(misc/ui/buttons/Bulldoze.png);
+    background-color: rgb(182, 137, 107);
+}
+#building1{
+    margin: 10px 560px;
+    background-image: url(misc/ui/buttons/Residential.png);
+    background-color: rgb(68, 134, 68);
+}
+#building2{
+    background-image: url(misc/ui/buttons/Commercial.png);
+
+    margin: 10px 620px;
+    background-color: rgb(62, 128, 182);
+}
+#building3{
+    margin: 10px 680px;
+    background-image: url(misc/ui/buttons/Industry.png);
+    background-color: rgb(199, 106, 0);
+}
+#powerplant{
+    margin: 10px 740px;
+    background-image: url(misc/ui/buttons/Powerplant.png);
+    background-color: rgb(184, 66, 66);
+}
+
+#powerplant, #building3, #building2, #building1, #bulldoze, #speed{
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#park{
+    margin: 10px 800px;
+    background-image: url(misc/ui/buttons/park.png);
+    background-size: contain;
+    background-color: rgb(141, 219, 77);
+    background-repeat: no-repeat;}
+
+.startbtn,.btn, .fakebtn, .greatbtn{
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+    border: none;
+    outline: none;
+    color: white;
+    transition: 0.5s;
+}
+.startbtn, .greatbtn{
+    width: 180px;
+    height: 90px;
+    background-color: #28567A;
+    font-size: 40px;
+}
+.greatbtn{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.bank{
+    padding-left: 10px;
+    text-align: left;
+    color: black;
+    background-position: center;
+    width: 170px;
+    height: 25px;
+    background-color: white;
+    font-size: 20px;  
+}
+
+.clock,.population{
+    color: black;
+    position: fixed;
+    background-position: center;
+    height: 25px;
+    background-color: white;
+    font-size: 20px;  
+}
+#close{
+    border-radius: 20px;
+    border: 1px solid;
+    color: black;
+    position: fixed;
+    right: -20px;
+    top: -20px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    outline: none;
+    background-size: contain;
+    background-image: url(misc/ui/buttons/quit.png);
+    z-index: 2;
+}
+
+#close:hover{
+    cursor: pointer;
+}
+.btn{
+    border-radius: 10px;
+    color: black;
+    position: fixed;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    background-color: white; 
+}
+
+.startbtn:hover, .greatbtn:hover{
+    width: 200px;
+    transition: 0.5s;
+    cursor: pointer;   
+}
+
+.btn:hover{
+    background-color:rgba(255, 255, 255, 0.836);
+    transition: 0.5s;
+    cursor: pointer;
+}
+ 
+.btn .tooltiptext, .fakebtn .tooltiptext{
+    visibility: hidden;
+    width: 160px;
+    background-color: #28567A;
+    color: white;
+    text-align: left;
+    border-radius: 10px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 3;
+    top: 140%;
+    left: 40%;
+    margin-left: -85px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.btn .tooltiptext::after, .fakebtn .tooltiptext::after{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}
+  
+.btn:hover .tooltiptext, .fakebtn:hover .tooltiptext{
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* menu */
+.settingbtn{
+    background-image: url(misc/ui/buttons/settings.png) ;
+}
+
+.settingbtn, .settingbtn1{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background-size: contain;
+    outline: none;
+    transition: 0.5s;
+    margin-top: 5px;
+    background-color: transparent;
+    margin-right: 10px; 
+}
+
+#leave{
+    background-image: url(misc/ui/buttons/quit.png);
+}
+#togglemusic{
+    background-image: url(misc/ui/buttons/volume.png);
+}
+#informations{
+    background-image: url(misc/ui/buttons/info.png);
+}
+.settingbtn1:hover{
+    margin-left: -5px;
+}
+
+.settings{
+    position: fixed;
+    display: inline-block;
+    margin-top: 10px;
+    right: 5px;
+    z-index: 3;
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    z-index: 3;
+}
+
+.dropdown .settingbtn1{
+    display: block;
+}
+
+.settings:hover .dropdown{
+    display: block;
+    animation: fadeInAnimation ease 1s; 
+    animation-fill-mode: forwards;
+}
+
+.settings:hover .settingbtn{
+    cursor: pointer;
+    transition: 0.5s;
+    background-image: url(misc/ui/buttons/settings\ hover.png);
+}
+
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     }    
+}
+/* Info Window */
+#gamemanual{
+    display: none;
+    height: 460px;
+}
+#picmanual{
+    border-radius: 10px;
+    border: solid 3px #28567A;
+    right: 5px;
+    left: 385px;
+    top: 5px;
+    bottom: 60px;
+    position: fixed;
+    background-color: #28567A;
+    background-image: url(misc/ui/backgrounds/page1.PNG);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#texmanual{
+    border-radius: 5px;
+    position: fixed;
+    left: 10px;
+    right: 385px;
+    top: 10px;
+    bottom: 60px;
+    text-align: justify;
+    font-size: 24px;
+}
+.navbtn{
+    background-color: #28567A;
+    border: none;
+    outline: none;
+    font-family: 'Fredoka One', cursive;
+    height: 50px;
+    position: fixed;
+    bottom: 5px;
+    width: 92px;
+    font-size: 16px;
+    color: white;
+}
+.navbtn:hover{
+    cursor: pointer;
+    height: 52px;
+}
+#page1{
+    left: 5px;
+}
+#page2{
+    left: 99px;
+}
+#page3{
+    left: 193px;
+}
+#page4{
+    left: 287px;
+}
+#page5{
+    left: 381px;
+}
+#page6{
+    left: 475px;
+}
+#page7{
+    left: 569px;
+}
+#page8{
+    left: 663px;
+}
+/* moving objects */
+#flodropsbombs{
+    display: none;
+    position: absolute;
+    background-image: url(misc/fields/flo.png);
+    background-size: contain;
+    height: 250px;
+    width: 250px;
+    background-repeat: no-repeat;
+    animation: fadeInAnimation ease 2s; 
+    animation-fill-mode: forwards;
+    z-index: 2;
+}
+/* horizontal */
+#car1, #car2, #car3, #car4, #car5, #car5, #car6, #car7{
+    position: absolute;
+    height: 21px;
+    width: 35px;
+    background-size: contain; 
+}
+/* vertical*/
+#car8, #car9, #car10, #car11, #car12, #car13, #car14, #car15, #car16, #car17{
+    position: absolute;
+    width: 21px;
+    height: 35px;
+    background-size: contain; 
+}
+
+/* Everything  for the gamefield */
+#table{
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+.coast{
+    background-image: url(misc/fields/coast.png);  
+}
+
+.mountain{
+    background-image: url(misc/fields/forestl.png);
+}
+
+.mountain, .coast, #Border, .field{
+    min-width: 380px;
+    height: 380px;
+    background-size: 100%;
+    padding: 0px 0px;
+}
+
+.coasttop{
+    background-image: url(misc/fields/coasttop.png);
+}
+
+.coastbottom{
+    background-image: url(misc/fields/coastbottom.png);
+}
+
+.forest{
+    background-image: url(misc/fields/forest.png);   
+}
+
+.foresttop{
+    background-image: url(misc/fields/foresttop.png);
+}
+
+.forestbottom{
+    background-image: url(misc/fields/forestbottom.png);
+}
+
+.connection{
+    background-image: url(misc/fields/forestb.png);
+}
+
+.corner2{
+    background-image: url(misc/fields/corner2.png);
+}
+
+.corner3{
+    background-image: url(misc/fields/corner3.png);
+}
+
+.field, .fieldbtn{
+    text-align: center;
+    outline: none;
+    border: none;
+    border-collapse: collapse;
+    background-repeat: no-repeat;
+}
+
+.fieldbtn{
+    background-color: transparent;
+    min-width: 375px;
+    height: 375px;
+}
+
+.fieldbtn:hover{
+    cursor: pointer;
+    transition: 0.1s;
+    border: 4px solid rgb(201, 0, 0);
+}
+/* test */
+#test{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    height: 50px;
+    width: 100px;
+}

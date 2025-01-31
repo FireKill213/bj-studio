@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelguide für Sydney</title>
+    <link href="style/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div class="navbar" id="navBar">
+        <div class="australian-flag">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1280" height="640"
+                viewBox="0 0 10080 5040">
+                <defs>
+                    <clipPath id="c1">
+                        <path d="M0,0H6V3H0z" />
+                    </clipPath>
+                    <clipPath id="c2">
+                        <path d="M0,0V1.5H6V3H6zM6,0H3V3H0V3z" />
+                    </clipPath>
+                    <path id="Star7"
+                        d="M0,-360 69.421398,-144.155019 281.459334,-224.456329 155.988466,-35.603349 350.974048,80.107536 125.093037,99.758368 156.198146,324.348792 0,160 -156.198146,324.348792 -125.093037,99.758368 -350.974048,80.107536 -155.988466,-35.603349 -281.459334,-224.456329 -69.421398,-144.155019z" />
+                    <path id="Star5"
+                        d="M0,-210 54.859957,-75.508253 199.721868,-64.893569 88.765275,28.841586 123.434903,169.893569 0,93.333333 -123.434903,169.893569 -88.765275,28.841586 -199.721868,-64.893569 -54.859957,-75.508253z" />
+                </defs>
+                <g transform="scale(840)">
+                    <rect width="12" height="6" fill="#00008b" />
+                    <path d="M0,0 6,3M6,0 0,3" stroke="#fff" stroke-width="0.6" clip-path="url(#c1)" />
+                    <path d="M0,0 6,3M6,0 0,3" stroke="#f00" stroke-width="0.4" clip-path="url(#c2)" />
+                    <path d="M3,0V3M0,1.5H6" stroke="#fff" />
+                    <path d="M3,0V3M0,1.5H6" stroke="#f00" stroke-width="0.6" />
+                </g>
+                <g fill="#fff">
+                    <use id="Comwlth" xlink:href="#Star7" transform="translate(2520, 3780) scale(2.1)" />
+                    <use id="αCrucis" xlink:href="#Star7" x="7560" y="4200" />
+                    <use id="βCrucis" xlink:href="#Star7" x="6300" y="2205" />
+                    <use id="γCrucis" xlink:href="#Star7" x="7560" y="840" />
+                    <use id="δCrucis" xlink:href="#Star7" x="8680" y="1869" />
+                    <use id="εCrucis" xlink:href="#Star5" x="8064" y="2730" />
+                </g>
+            </svg>
+            <a href="#">Travelguide</a>
+        </div>
+
+        <div>
+            <a href="#section1">Startseite</a>
+            <a href="#section2">Highlights</a>
+            <a href="#section3">Taronga Zoo</a>
+            <a href="#section4">Tag zu Nacht</a>
+            <a href="#section5">Feuerwerk</a>
+            <a href="#section6">Audio</a>
+            <a href="#section7">PDF</a>
+        </div>
+    </div>
+
+    <div class="welcome-image section" id="section1">
+        <div class="welcome-text">
+            <h1>Willkommen in Sydney</h1>
+            <p>Dein ultimativer Travelguide</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section" id="section2">
+            <h2>Highlights</h2>
+            <div class="carousel">
+                <div class="carousel-images">
+                    <div class="carousel-item">
+                        <img src="assets/opera_house_169.jpg" alt="Opera House">
+                        <div class="carousel-text">Opera House</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/harbour_bridge_sunset_169.jpg" alt="Harbour Bridge">
+                        <div class="carousel-text">Harbour Bridge</div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="assets/taronga_zoo_169.jpg" alt="Toronga Zoo">
+                        <div class="carousel-text">Taronga Zoo</div>
+                    </div>
+                </div>
+                <div class="carousel-buttons">
+                    <button class="carousel-button prev-btn">❮</button>
+                    <button class="carousel-button next-btn">❯</button>
+                </div>
+                <div class="carousel-indicators">
+                    <div class="carousel-indicator" data-slide="0"></div>
+                    <div class="carousel-indicator" data-slide="1"></div>
+                    <div class="carousel-indicator" data-slide="2"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="section3">
+            <div class="grid-gallery">
+                <div class="item medium">
+                    <img src="assets/capibara.jpg" alt="Capibara">
+                </div>
+                <div class="item large">
+                    <img src="assets/taronga_zoo.jpg" alt="Taronga Zoo">
+                    <div class="gallery-text">
+                        <p>Taronga Zoo</p>
+                    </div>
+                </div>
+                <div class="item medium">
+                    <img src="assets/koala.jpg" alt="Koala">
+                </div>
+                <div class="item small">
+                    <img src="assets/tasmanian_devil.jpg" alt="Tasmanischer Teufel">
+                </div>
+                <div class="item small">
+                    <img src="assets/seal_show.jpg" alt="Robben Show">
+                </div>
+                <div class="item small">
+                    <img src="assets/tiger.jpg" alt="Tiger">
+                </div>
+            </div>
+            <div class="info-block">
+                <div class="info-text-block-wide">
+                    <p>
+                        Der Taronga Zoo in Sydney ist einer der bekanntesten Zoos Australiens und liegt malerisch am
+                        Ufer des Sydney Harbour. Er wurde 1916 eröffnet und beherbergt über 4.000 Tiere aus 350
+                        verschiedenen Arten. Der Zoo bietet Besuchern nicht nur die Möglichkeit, eine Vielzahl
+                        exotischer und einheimischer Tiere zu sehen, sondern auch spektakuläre Ausblicke auf die
+                        Skyline von Sydney und das Opera House. Mit speziellen Programmen wie Tierfütterungen,
+                        Begegnungen mit Tieren und Bildungsangeboten ist der Taronga Zoo ein spannendes Ziel für
+                        Familien und Tierliebhaber. Ein Highlight ist die Seilbahn, die eine einzigartige
+                        Perspektive auf die Zoo-Anlagen und die umliegende Landschaft bietet.
+                    </p>
+                </div>
+            </div>
+            <canvas id="kangarooCanvas" width="1200" height="256"></canvas>
+
+
+        </div>
+
+        <div class="section" id="section4">
+            <h2>Sydney von Tag zu Nacht</h2>
+            <div class="info-block">
+                <div class="info-text-block">
+                    <h3>Queen Victoria Building</h3>
+                    <p>Das Queen Victoria Building (QVB) in Sydney ist ein architektonisches Meisterwerk, das 1898
+                        eröffnet wurde und sich im Herzen der Stadt befindet. Ursprünglich als Markthalle konzipiert,
+                        wurde das Gebäude im prächtigen Romanesque Revival-Stil erbaut und ist bekannt für seine
+                        imposanten Kuppeln, Buntglasfenster und kunstvollen Mosaike.
+                        <br><br>
+                        Nach Jahrzehnten des Verfalls und verschiedener Nutzungen wurde das QVB in den 1980er Jahren
+                        umfassend restauriert und in ein luxuriöses Einkaufszentrum umgewandelt. Heute beherbergt es
+                        eine Vielzahl von exklusiven Boutiquen, Cafés und Restaurants. Ein besonderes Highlight ist die
+                        historische Uhr, die zur vollen Stunde Figuren aus der britischen Geschichte zeigt.
+                        <br><br>
+                        Das QVB steht nicht nur für Einkaufserlebnisse, sondern auch für kulturelles Erbe und
+                        architektonische Pracht, was es zu einem beliebten Ziel für Touristen und Einheimische
+                        gleichermaßen macht.
+                    </p>
+                </div>
+                <div class="carousel info-images-block">
+                    <div class="carousel-images">
+                        <div class="carousel-item">
+                            <img src="assets/queen_victoria_building.jpg" alt="Queen Victoria Building">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/queen_victoria_building_inside.jpg"
+                                alt="Queen Victoria Building von innen">
+                        </div>
+                    </div>
+                    <div class="carousel-buttons">
+                        <button class="carousel-button prev-btn">❮</button>
+                        <button class="carousel-button next-btn">❯</button>
+                    </div>
+                    <div class="carousel-indicators">
+                        <div class="carousel-indicator" data-slide="0"></div>
+                        <div class="carousel-indicator" data-slide="1"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-block">
+                <div class="info-text-block">
+                    <h3>Downtown</h3>
+                    <p>Das Stadtzentrum von Sydney, bekannt als CBD (Central Business District), beginnt mit der
+                        markanten Sydney Town Hall. Dieses beeindruckende viktorianische Gebäude aus dem Jahr 1889 dient
+                        als Sitz des Stadtrats und beliebter Veranstaltungsort. Mit seiner prächtigen Architektur ist
+                        die Town Hall ein bedeutendes Kulturdenkmal.
+                        <br><br>
+                        Von der Town Hall führt die George Street, eine der ältesten und belebtesten Straßen Sydneys,
+                        durch das Zentrum. Sie ist ein zentraler Verkehrsknotenpunkt und verbindet wichtige
+                        Sehenswürdigkeiten.
+                        <br><br>
+                        Das Stadtzentrum von Sydney ist eine lebendige Mischung aus Geschichte und Moderne, mit
+                        Sehenswürdigkeiten wie dem Sydney Opera House und dem Museum of Contemporary Art. Zur
+                        Weihnachtszeit wird es besonders festlich, mit Weihnachtsbäumen, die mit bunten Strandbällen
+                        dekoriert sind, und so die sommerliche Stimmung Australiens widerspiegeln.
+                    </p>
+                </div>
+                <div class="carousel info-images-block">
+                    <div class="carousel-images">
+                        <div class="carousel-item">
+                            <img src="assets/townhall.jpg" alt="Townhall">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/city_center.jpg" alt="Stadt Zentrum">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/downtown.jpg" alt="Downtown">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/summer_christmas_tree.jpg" alt="Sommer Weihnachtsbaum">
+                        </div>
+                    </div>
+                    <div class="carousel-buttons">
+                        <button class="carousel-button prev-btn">❮</button>
+                        <button class="carousel-button next-btn">❯</button>
+                    </div>
+                    <div class="carousel-indicators">
+                        <div class="carousel-indicator" data-slide="0"></div>
+                        <div class="carousel-indicator" data-slide="1"></div>
+                        <div class="carousel-indicator" data-slide="2"></div>
+                        <div class="carousel-indicator" data-slide="3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-block">
+                <div class="info-text-block">
+                    <h3>Hyde Park</h3>
+                    <p>
+                        Hyde Park in Sydney ist eine weitläufige, grüne Oase im Herzen der Stadt und der älteste
+                        öffentliche Park Australiens. Mit seinen gepflegten Gärten, plätschernden Brunnen und schattigen
+                        Wegen lädt der Park zu entspannten Spaziergängen ein.
+                        <br><br>
+                        Am nördlichen Ende des Parks thront die beeindruckende St Mary's Cathedral, eine prächtige
+                        neugotische Kirche aus dem 19. Jahrhundert. Ihre hohen Türme und kunstvollen Buntglasfenster
+                        machen sie zu einem bedeutenden religiösen Bauwerk und Ort der Besinnung.
+                        <br><br>
+                        Im südlichen Teil des Parks befindet sich das ANZAC Memorial, ein beeindruckendes
+                        Art-Deco-Denkmal zu Ehren der australischen und neuseeländischen Soldaten des Ersten Weltkriegs.
+                        Es beherbergt eine Krypta und eine Gedenkhalle, die an die Opfer und den Einsatz der
+                        ANZAC-Truppen erinnern.
+                    </p>
+                </div>
+                <div class="carousel info-images-block">
+                    <div class="carousel-images">
+                        <div class="carousel-item">
+                            <img src="assets/st-marys_cathedral.jpg" alt="St Marys Cathedral">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/anzac_memorial.jpg" alt="Anzac Memorial">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/hyde_park.jpg" alt="Hyde Park">
+                        </div>
+                    </div>
+                    <div class="carousel-buttons">
+                        <button class="carousel-button prev-btn">❮</button>
+                        <button class="carousel-button next-btn">❯</button>
+                    </div>
+                    <div class="carousel-indicators">
+                        <div class="carousel-indicator" data-slide="0"></div>
+                        <div class="carousel-indicator" data-slide="1"></div>
+                        <div class="carousel-indicator" data-slide="2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-block">
+                <div class="info-text-block">
+                    <h3>China Town</h3>
+                    <p>Chinatown in Sydney ist ein lebendiges Viertel, das den starken asiatischen Einfluss auf die
+                        Stadt zeigt. Nahe Darling Harbour gelegen, ist es ein zentraler Treffpunkt für Einheimische und
+                        Touristen. Die Straßen sind mit traditionellen chinesischen Torbögen, roten Laternen und
+                        kunstvollen Fassaden geschmückt, und bieten exotische Lebensmittel, traditionelle Medizin und
+                        Kunsthandwerke.
+                        <br><br>
+                        Besonders beeindruckend ist die gastronomische Szene. Chinatown beherbergt einige der besten
+                        asiatischen Restaurants in Sydney, die Gerichte aus China, Japan, Korea, Thailand und anderen
+                        asiatischen Ländern anbieten. Von Dim Sum und Pekingente bis hin zu Sushi und Pho – die Auswahl
+                        ist vielfältig und von höchster Qualität. Viele Lokale sind familiengeführt und bieten
+                        authentische Rezepte, die von Generation zu Generation weitergegeben wurden.
+                    </p>
+                </div>
+                <div class="info-images-block">
+                    <img src="assets/chinatown.jpg" alt="Chinatown">
+                </div>
+            </div>
+            <div class="info-block">
+                <div class="info-text-block">
+                    <h3>Manly Council</h3>
+                    <p>Manly, ein malerischer Stadtteil im Northern Beaches Council von Sydney, ist vor allem für seinen
+                        wunderschönen Strand bekannt. Der Manly Beach zieht mit seinem goldenen Sand und perfekten
+                        Surfbedingungen sowohl Einheimische als auch Touristen an.
+                        <br><br>
+                        Ein weiterer Anziehungspunkt ist "The Corso", eine lebhafte Fußgängerzone, die vom Fährterminal
+                        zum Strand führt. Gesäumt von Geschäften, Cafés, Restaurants und Bars, bietet The Corso eine
+                        entspannte Atmosphäre mit Straßenkünstlern und Live-Musik.
+                        <br><br>
+                        Eine interessante kulinarische Ergänzung in Manly ist die Bavarian Kette, die eine authentische
+                        deutsche Erfahrung mit traditioneller Musik, freundlicher Bedienung in Tracht und einer großen
+                        Auswahl an deutschem Bier bietet. Hier können Besucher deutsche Spezialitäten in gemütlicher
+                        Atmosphäre genießen.
+                    </p>
+                </div>
+                <div class="carousel info-images-block">
+                    <div class="carousel-images">
+                        <div class="carousel-item">
+                            <img src="assets/manly_beach.jpg" alt="Manly Beach">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/the_corso.jpg" alt="The Corso">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/bavarian_sydney.jpg" alt="Bavarian Sydney">
+                        </div>
+                    </div>
+                    <div class="carousel-buttons">
+                        <button class="carousel-button prev-btn">❮</button>
+                        <button class="carousel-button next-btn">❯</button>
+                    </div>
+                    <div class="carousel-indicators">
+                        <div class="carousel-indicator" data-slide="0"></div>
+                        <div class="carousel-indicator" data-slide="1"></div>
+                        <div class="carousel-indicator" data-slide="2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-block">
+                <div class="info-text-block">
+                    <h3>Circular Quay</h3>
+                    <p>Circular Quay in Sydney ist ein zentraler Verkehrsknotenpunkt und ein beliebter Treffpunkt für
+                        Einheimische und Touristen. Als wichtiger Hafenbereich bietet Circular Quay Zugang zu Fähren,
+                        Zügen und Bussen. Von dort gibt es wichtige Fähranbindungen zu beliebten Zielen wie Manly Beach,
+                        Taronga Zoo, Watsons Bay und Parramatta. Diese Verbindungen bieten nicht nur praktische
+                        Transportmöglichkeiten, sondern auch eine malerische Aussicht auf den Hafen und seine Umgebung.
+                        <br><br>
+                        Ein Highlight von Circular Quay ist die atemberaubende Aussicht auf die Sydney Harbour Bridge.
+                        Von hier aus können Besucher die beeindruckende Architektur der Brücke bewundern und die
+                        lebendige Hafenatmosphäre genießen. Circular Quay ist auch ein Ausgangspunkt für viele
+                        Sehenswürdigkeiten wie das Sydney Opera House und die Royal Botanic Gardens, was es zu einem
+                        unverzichtbaren Ort für jeden Sydney-Besucher macht.
+                    </p>
+                </div>
+                <div class="carousel info-images-block">
+                    <div class="carousel-images">
+                        <div class="carousel-item">
+                            <img src="assets/circular_quay.jpg" alt="Circular Quay">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/harbour_bridge_sunset.jpg" alt="Harbour Bridge Sonnenuntergang">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/ship.jpg" alt="Schiff im Hafen">
+                        </div>
+                    </div>
+                    <div class="carousel-buttons">
+                        <button class="carousel-button prev-btn">❮</button>
+                        <button class="carousel-button next-btn">❯</button>
+                    </div>
+                    <div class="carousel-indicators">
+                        <div class="carousel-indicator" data-slide="0"></div>
+                        <div class="carousel-indicator" data-slide="1"></div>
+                        <div class="carousel-indicator" data-slide="2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-block">
+                <div class="info-text-block">
+                    <h3>Hotels</h3>
+                    <p>
+                        In Sydney gibt es unter dem Namen "Hotel" zahlreiche Bars mit einer Vielzahl von Getränken und
+                        Atmosphären. Besonders beliebt sind die Happy Hours von 16:00 bis 18:00 Uhr, bei denen Getränke
+                        zu vergünstigten Preisen angeboten werden. Die lebendige Atmosphäre nach Feierabend oder am
+                        Wochenende mit Live-Musik und besonderen Events macht diese Zeiten zu idealen Besuchszeiten.
+                        <br><br>
+                        Australische Bars verwenden Milliliter (ml) für Getränkeportionen; ein Pint entspricht etwa 570
+                        ml. Sydney's Bars bieten eine faszinierende Mischung aus Gastfreundschaft, kreativen Cocktails
+                        und lebendiger Ausgehkultur – für jeden Anlass das Richtige.
+                    </p>
+                </div>
+                <div class="info-images-block">
+                    <img src="assets/skyline_1.jpg" alt="Skyline">
+                </div>
+            </div>
+            <div class="info-block">
+                <div class="info-text-block">
+                    <h3>Opera House</h3>
+                    <p>Das Sydney Opera House, am Circular Quay gelegen, ist ein ikonisches Wahrzeichen Australiens mit
+                        seiner markanten Architektur aus betonverkleideten Schalen, die an Segel oder Muscheln erinnern.
+                        Die weiße Oberfläche besteht aus insgesamt 1.056.006 einzelnen glasierten Keramikfliesen aus
+                        Schweden, die das Sonnenlicht reflektieren und dem Gebäude tagsüber einen schimmernden Glanz
+                        verleihen.
+                        <br><br>
+                        Besonders beeindruckend ist das Opera House bei Nacht, wenn es durch spektakuläre
+                        Beleuchtungseffekte in Szene gesetzt wird. Die Beleuchtung betont die einzigartige Struktur und
+                        macht das Gebäude zu einem magischen Anblick, der Besucher aus aller Welt anzieht. Neben seiner
+                        kulturellen Bedeutung als Aufführungsort für Opern, Ballett und Theater verkörpert das Sydney
+                        Opera House auch die moderne Architektur und die künstlerische Kreativität Australiens.
+                    </p>
+                </div>
+                <div class="info-images-block">
+                    <img src="assets/opera_house_night.jpg" alt="Opera House">
+                </div>
+            </div>
+            <div class="info-block">
+                <div class="info-text-block">
+                    <h3>Feuerwerk</h3>
+                    <p>Das jährliche Highlight in Sydney schlechthin ist zweifellos das spektakuläre Feuerwerk am
+                        Silvesterabend. Das Silvesterfeuerwerk am Sydney Harbour ist weltberühmt und lockt jedes Jahr
+                        Tausende von Besuchern aus der ganzen Welt an. Die atemberaubende Kulisse der Sydney Harbour
+                        Bridge und des Opera House bildet die perfekte Bühne für diese beeindruckende Show.
+                        <br><br>
+                        Das Feuerwerk in Sydney ist bekannt für seine Kreativität und beeindruckenden visuellen Effekte,
+                        die synchron zur Musik über den Hafen tanzen. Die Veranstaltung zieht eine riesige Menschenmenge
+                        an, die die Ufer des Hafens säumt, um dieses Ereignis zu erleben. Die Feierlichkeiten beginnen
+                        am Abend mit verschiedenen Veranstaltungen und Konzerten entlang des Hafens und gipfeln im
+                        großen Countdown um Mitternacht.
+                    </p>
+                </div>
+                <div class="info-images-block">
+                    <img src="assets/firework.jpg" alt="Feuerwerk">
+                </div>
+            </div>
+            <script src="scripts/carousel.js"></script>
+            <script src="scripts/canvas.js"></script>
+            <script src="scripts/scrolllistener.js"></script>
+        </div>
+
+        <div class="section" id="section5">
+            <h2>Das Feuerwerk in Sydney</h2>
+            <video controls>
+                <source src="assets/firework.mp4" type="video/mp4">
+                <source src="assets/firework.avi" type="video/avi">
+                <source src="assets/firework.MOV" type="video/MOV">
+                Dein Browser unterstützt das Video-Element nicht.
+            </video>
+        </div>
+
+        <div class="section" id="section6">
+            <h2>Audio</h2>
+            <div class="audio-container">
+                <audio controls>
+                    <source src="audio/Gravity_Falls_theme.flac" type="audio/flac">
+                    <source src="audio/Gravity_Falls_theme.mp3" type="audio/mpeg">
+                    <source src="audio/Gravity_Falls_theme.ogg" type="audio/ogg">
+                    Dein Browser unterstützt das Audio-Element nicht.
+                </audio>
+            </div>
+
+
+        </div>
+        <div class="section" id="section7">
+            <h2>PDF</h2>
+            <div class="pdf-wrapper">
+                <object class="pdf" data="assets/quellcode.pdf" type="application/pdf" width="500" height="700">
+                    <a href="assets/quellcode.pdf">Download PDF</a>
+                </object>
+                <div class="button-wrapper">
+                    <a class="pdf-button" href="assets/quellcode.pdf" download="Quellcode.pdf">Download PDF</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
