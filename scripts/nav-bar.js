@@ -1,4 +1,7 @@
-window.onload = initNavBar()
+window.onload = function() {
+    initNavBar();
+    document.getElementById("menu-icon").addEventListener("click", handleResponsiveNavBar);
+};
 
 function initNavBar() {
     document.getElementById("nav-bar").innerHTML = `
@@ -6,7 +9,7 @@ function initNavBar() {
         <a href="/projects.html" id="projects">Projects</a>
         <a href="/contact.html" id="contact">Contact</a>
         <a href="#about">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="handleResponsiveNavBar()">
+        <a href="javascript:void(0);" class="icon" id="menu-icon">
             <div class="menu-bars" data-src="/src/icons/menu_light_64.png"></div>
         </a>
     `;
@@ -15,7 +18,6 @@ function initNavBar() {
 
 function handleActiveButton() {
     var pathArray = window.location.pathname.split('/');
-    var secondLevelLocation = pathArray[1];
 
     switch (document.title) {
         case "Projects":

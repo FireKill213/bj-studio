@@ -17,7 +17,7 @@ body {
     background: rgba(29, 31, 33, 0.60);
     box-shadow: 0 0 10px #000;
     margin: 0 auto;
-    padding: 80px 0px;
+    padding: 80px 0;
     position: relative;
     width: 1024px;
     z-index: 1;
