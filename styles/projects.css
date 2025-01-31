@@ -153,6 +153,9 @@
   .content {
     flex-basis: 100%;
     min-height: 300px;
+    border-color: #008CC1;
+    box-shadow: 0 0 20px #008CC1;
+    color: white;
   }
 
   .button-container {
@@ -163,5 +166,21 @@
   .content a {
     font-size: 13px;
     height: 35px;
+    background: #008CC1;
+    border-color: white;
   }
+
+  
+  .content .background {
+    filter: brightness(40%) blur(2px);
+  }
+  
+  .content h2 {
+    text-shadow: none;
+  }
+  
+  .content p {
+    opacity: 1;
+  }
+  
 }
