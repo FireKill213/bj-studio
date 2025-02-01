@@ -11,7 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const fontSize = 18;
         const cols = Math.floor(window.innerWidth / fontSize);
-        const drops = new Array(cols).fill(1);
+        // Initialisiere jeden Drop mit einer zufälligen Startposition (in Spaltenhöhen)
+        const drops = Array.from({ length: cols }, () => Math.floor(Math.random() * window.innerHeight / fontSize));
+        
+        // Definiere eine geringere Geschwindigkeit (langsamerer Fall)
+        const speed = 0.75;
 
         function draw() {
             ctx.fillStyle = 'rgba(0, 0, 0, 0.06)';
@@ -21,12 +25,15 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.font = `${fontSize}px monospace`;
 
             drops.forEach((drop, i) => {
+                // Wähle einen zufälligen Braille-Zeichencode
+                const char = String.fromCharCode(0x2800 + Math.floor(Math.random() * 256));
+                ctx.fillText(char, i * fontSize, drop * fontSize);
+
+                // Wenn der Drop das Ende erreicht hat, starte ihn gelegentlich neu von oben
                 if (drop * fontSize > canvas.height && Math.random() > 0.975) {
                     drops[i] = 0;
                 }
-                const char = String.fromCharCode(0x2800 + Math.random() * 256);
-                ctx.fillText(char, i * fontSize, drop * fontSize);
-                drops[i]++;
+                drops[i] += speed; // hier wird die Position langsamer erhöht
             });
 
             animationFrame = requestAnimationFrame(draw);

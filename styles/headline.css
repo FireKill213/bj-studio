@@ -1,11 +1,10 @@
 :root {
     --background-color: #F9F8F8;
-    --headline-color: #fff;
   }
   
   header.header {
     margin: 0;
-    padding: 1rem 0rem;
+    padding: 15px 0;
     width: 100%;
     text-align: center;
     position: relative; /* Wichtig für Glitch-Positionierung */
@@ -13,21 +12,15 @@
   
   .glitched {
     position: relative;
-    font-size: 4rem;
-    color: var(--headline-color);
     margin: 0;
-    text-transform: uppercase;
-    font-weight: 900;
-    line-height: 1.2;
   }
   
   .glitch-window {
     position: absolute;
-    top: 1rem;
+    top: 15px;
     left: 0;
     width: 100%;
     height: 100%;
-    color: var(--headline-color);
     text-shadow: 2px 0 var(--background-color), -1px 0 #008CC1, -2px 0 #00435b;
     overflow: hidden;
     animation: crt-me 2500ms infinite linear alternate-reverse;
@@ -51,12 +44,12 @@
   /* Responsive Anpassungen */
   @media (max-width: 768px) {
     .glitched {
-      font-size: 3rem;
+      font-size: 45px;
     }
   }
   
   @media (min-width: 1600px) {
     .glitched {
-      font-size: 6rem;
+      font-size: 90px;
     }
   }

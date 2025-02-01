@@ -1,6 +1,19 @@
 window.onload = function() {
     initNavBar();
     document.getElementById("menu-icon").addEventListener("click", handleResponsiveNavBar);
+
+    document.querySelectorAll('#nav-bar a:not(.icon)').forEach(link => {
+        link.addEventListener('click', function() {
+            document.getElementById("nav-bar").className = "topnav";
+        });
+    });
+
+    document.addEventListener('click', function(e) {
+        const navBar = document.getElementById("nav-bar");
+        if (!navBar.contains(e.target)) {
+            navBar.className = "topnav";
+        }
+    });
 };
 
 function initNavBar() {
@@ -17,8 +30,6 @@ function initNavBar() {
 }
 
 function handleActiveButton() {
-    var pathArray = window.location.pathname.split('/');
-
     switch (document.title) {
         case "Projects":
             document.getElementById("projects").className = "active"

@@ -1,17 +1,19 @@
+document.addEventListener('DOMContentLoaded', () => {
+
 const canvas = document.getElementById('kangarooCanvas');
 const ctx = canvas.getContext('2d');
 
 const kangarooSprite = new Image();
-kangarooSprite.src = '../assets/kangaroo.png';
+kangarooSprite.src = './assets/kangaroo.png';
 
 const background = new Image();
-background.src = '../assets/seemless_background.jpg';
+background.src = './assets/seemless_background.jpg';
 
 const kangaroo = {
     x: canvas.width / 2 - 32,
     y: canvas.height / 2 + 32,
     width: 64,
-    height: 64,
+    height: 64, 
     dy: 2,
     jumping: true
 };
@@ -71,3 +73,4 @@ background.onerror = function () {
 kangarooSprite.onerror = function () {
     console.error("Fehler beim Laden des Känguru-Bilds");
 };
+})

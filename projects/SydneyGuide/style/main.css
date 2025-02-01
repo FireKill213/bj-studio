@@ -54,19 +54,10 @@ h3 {
     font-size: 22px;
 }
 
-a {
+a{
     text-decoration: none;
 }
 
-.navbar a {
-    color: white;
-    margin: 0 10px;
-}
-
-.navbar a:hover {
-    text-decoration: underline;
-    transition-duration: 0.5s;
-}
 
 .section {
     margin-bottom: 20px;
@@ -111,30 +102,6 @@ a {
     border-radius: 10px;
 }
 
-.australian-flag {
-    display: flex;
-    align-items: center;
-}
-
-.australian-flag svg {
-    width: 60px;
-    height: 60px;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(107, 176, 179);
-    transition: background-color 0.5s;
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    height: 50px;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 10px 18px 0px rgba(0, 0, 0, 0.46);
-}
 
 .container {
     width: 1200px;
@@ -202,6 +169,13 @@ a {
 }
 
 @media only screen and (max-width: 940px) {
+    .welcome-text {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 0;
+        width: 100%;
+    }
+
     .item.large {
         grid-column: span 1;
         grid-row: span 1;
@@ -215,6 +189,12 @@ a {
     .item.small {
         grid-column: span 1;
         grid-row: span 1;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 70px;
     }
 }
 

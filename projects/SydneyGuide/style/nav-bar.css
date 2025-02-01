@@ -1,10 +1,10 @@
 /* ===== Navigation ===== */
 .topnav-outer {
-    background-color: #1D1F21;
+    background-color: #6bb0b3;
     box-shadow: 0 0 10px #000;
     overflow: hidden;
     position: fixed;
-    width: 100vw;
+    width: 100%;
     z-index: 1000;
 }
 
@@ -15,22 +15,25 @@
 
 .topnav a.icon {
     display: none;
-    height: 20px;
-    width: 20px;
 }
+
 
 .topnav a {
     color: #f2f2f2;
     display: block;
     float: left;
     font-size: 18px;
-    padding: 14px 20px;
+    padding: 14px 10px;
     text-align: center;
     text-decoration: none;
 }
 
+.topnav a:nth-child(2) {
+    margin-left: 80px;
+}
+
 .topnav a:hover {
-    background-color: #191b1d;
+    background-color: #4b7c7e;
 }
 
 .topnav a.active {
@@ -40,9 +43,9 @@
 
 /* ===== Mobile Navigation ===== */
 .menu-bars {
-    background: url(/src/icons/menu_light_64.png) center/cover no-repeat;
-    height: 20px;
-    width: 20px;
+    background: url(/projects/SydneyGuide/assets/menu_light_64.png) center/cover no-repeat;
+    height: 22px;
+    width: 22px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -51,9 +54,13 @@
     }
 }
 
-@media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {
+@media screen and (max-width: 770px) {
+    .topnav a:not(:nth-child(2)) {
         display: none;
+    }
+
+    .topnav a {
+        margin-left: 80px;
     }
 
     .topnav a.icon {
@@ -77,3 +84,16 @@
         top: 0;
     }
 }
+
+.topnav .australian-flag {
+    position: absolute;
+    display: block;
+    margin: 0 10px;
+    align-items: center;
+}
+
+.australian-flag svg {
+    height: 50px;
+    width: 60px;
+}
+
