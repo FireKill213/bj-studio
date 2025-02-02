@@ -5,14 +5,14 @@ function createProjectCards() {
     {
       headline: "City Builder",
       text: 'A small City Builder Game developed as Part of the "Softwareprojekt" in 2021 where you can build your own town.',
-      link: "/projects/CityBuilder",
+      link: "/projects/citybuilder/home.html",
       linkText: "Play",
       backgroundImageStyle: "background-image: url('/projects/CityBuilder/misc/ui/backgrounds/Skyline.png')",
     },
     {
       headline: "Sydney Guide",
       text: 'A Sydney Travel Guide website created in 2024 as part of the lecture "web-design and standards".',
-      link: "/projects/SydneyGuide",
+      link: "/projects/sydneyguide/index.html",
       linkText: "Visit",
       backgroundImageStyle: "background-image: url('/projects/SydneyGuide/assets/sydney_wallpaper.jpg')",
     },
