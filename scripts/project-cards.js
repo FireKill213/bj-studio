@@ -1,6 +1,12 @@
-window.onload = createProjectCards()
+function initProjectCards() {
+  const container = document.getElementById('card-container');
+  if (!container){
+    console.error('Card container nicht gefunden!');
+    return;
+  };
 
-function createProjectCards() {
+  container.innerHTML = '';
+
   const cards = [
     {
       headline: "City Builder",
@@ -26,17 +32,12 @@ function createProjectCards() {
     }
   ]
 
-
-  const container = document.getElementById('card-container');
   cards.forEach((card, index) => {
-    // content-1, content-2, content-3 ... zum Beispiel rotiert:
     const contentClass = 'content-' + ((index % 3) + 1);
 
-    // Neues Div für eine Karte erstellen
     const cardElement = document.createElement('div');
     cardElement.classList.add('content', contentClass);
 
-    // HTML der Karte
     cardElement.innerHTML = `
             <div class="background-wrapper" style="background:${card?.backgroundColor}">
     <div class="background" style="${card.backgroundImageStyle}"></div>
@@ -50,7 +51,16 @@ function createProjectCards() {
   </div>
           `;
 
-    // Karte ins Container-Div einfügen
     container.appendChild(cardElement);
   });
 }
+
+if (document.getElementById('card-container')) {
+  initProjectCards();
+}
+
+window.addEventListener('route-changed', () => {
+  if (window.location.pathname === '/projects') {
+      initProjectCards();
+  }
+});

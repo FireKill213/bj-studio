@@ -19,31 +19,12 @@ window.onload = function() {
 function initNavBar() {
     document.getElementById("nav-bar").innerHTML = `
         <a href="/" id="home" >Home</a>
-        <a href="/projects.html" id="projects">Projects</a>
-        <a href="/contact.html" id="contact">Contact</a>
-        <a href="#about">About</a>
+        <a href="/projects" id="projects">Projects</a>
+        <a href="/contact" id="contact">Contact</a>
         <a href="javascript:void(0);" class="icon" id="menu-icon">
             <div class="menu-bars" data-src="/src/icons/menu_light_64.png"></div>
         </a>
     `;
-    handleActiveButton();
-}
-
-function handleActiveButton() {
-    switch (document.title) {
-        case "Projects":
-            document.getElementById("projects").className = "active"
-            break;
-            case "Contact":
-                document.getElementById("contact").className = "active"
-                break;
-                case "Home":
-                document.getElementById("home").className = "active"
-                break;
-    
-        default:
-            break;
-    }
 }
 
 function handleResponsiveNavBar() {
